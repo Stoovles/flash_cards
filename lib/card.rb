@@ -9,26 +9,32 @@ class Card
 end
 
 class Turn
-  attr_accessor :guess, :card_name
+  attr_accessor :guess, :card_info
 
-  def initialize(guess, card_name)
+  def initialize(guess, card_info)
     @guess = guess
-    @card_name = card_name
+    @card_name = card_info
   end
 
-  # def ask_question
-  #   puts question
-  # end
-  #
-  # def take_user_answer_and_check
-  #   user_answer = gets.chomp
-  #   if user_answer == answer
-  #     "That's correct!"
-  #     num_correct =+ 1
-  #   else
-  #     "That's incorrect."
-  #     num_incorrect =+ 1
-  #   end
-  # end
+  def guess
+    return guess
+  end
 
+  def card
+    return card_info
+  end
+
+  def correct?
+    if guess == answer
+      true
+    end
+  end
+
+  def feedback
+    if correct? = true
+      puts "Correct!"
+    else
+      puts "Incorrect."
+    end
+  end
 end
