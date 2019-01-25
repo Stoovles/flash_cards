@@ -12,12 +12,10 @@ class Deck
 
   def cards_in_category(check_category)
     cards.each do |card|
-      require 'pry';binding.pry
       if card.category == check_category
         @category_array << card
       end
     end
+    return @category_array
   end
-
-
 end
