@@ -7,6 +7,7 @@ class Round
     @turn_counter = 0
     @number_correct = 0
     @percent_correct = 0
+    @array_of_categories = []
   end
 
   def current_card
@@ -43,6 +44,10 @@ class Round
       turn.card.category == check_category
     end
     return number_correct_by_category(check_category) / check_category_array.count.to_f * 100
+  end
+
+  def array_of_categories
+    return turns_array.uniq{|unique_category| unique_category.card.category}
   end
 
 
