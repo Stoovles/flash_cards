@@ -6,7 +6,7 @@ require './lib/round'
 require './lib/turn'
 
 class DeckTest < Minitest::Test
-
+#I changed something so I could merge hehe
   def test_round_exists
     card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
     card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
